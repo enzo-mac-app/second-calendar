@@ -1,4 +1,4 @@
-// Exports the calendar data the website's in-browser calendar shows (enzomac.app/secondcalendar/calendar/),
+// Exports the calendar data the website's in-browser calendar shows (enzomac.app/cal/),
 // computed by the same CalendarCore the app uses, so the web page and the app always agree.
 //   swift run -c release sc-webdata <out.json>      (Scripts/web-data.sh writes it into the site)
 //

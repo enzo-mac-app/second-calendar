@@ -1,5 +1,5 @@
 #!/bin/bash
-# Regenerates the data behind the website's in-browser calendar (enzomac.app/secondcalendar/calendar/)
+# Regenerates the data behind the website's in-browser calendar (enzomac.app/cal/)
 # from CalendarCore, into the site repo. Run after Scripts/update-holidays.sh or a holiday fix, then deploy the site.
 set -euo pipefail
 cd "$(dirname "$0")/.."
