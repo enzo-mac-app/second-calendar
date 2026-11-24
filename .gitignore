@@ -1,0 +1,21 @@
+# 构建产物
+.build/
+build/
+.swiftpm/
+*.app
+*.dmg
+.DS_Store
+build-release.log
+
+# 密钥、证书
+.env
+.env.*
+*.pem
+*.p12
+*.key
+*.cer
+license-keys/
+secrets/
+
+# 下载的原始节假日数据（Scripts/update-holidays.sh 生成，内容已编进 BundledHolidays.swift）
+Data/raw/*.tmp
