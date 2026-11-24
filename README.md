@@ -68,7 +68,7 @@ Made by [Enzomac](https://enzomac.app/?ref=github-readme). Not affiliated with A
 Second Calendar 是一个免费、开源的 Mac 菜单栏日历：农历、节气、法定假日和调休（休 / 班）一眼看清，
 还能把美国、日本同事的假日和上班时间叠在一起看。
 
-- 下载：[enzomac.app/secondcalendar](https://enzomac.app/secondcalendar/zh-hans/?ref=github-readme)（已签名公证的 DMG，macOS 14+，会自动更新）
+- 网页版和下载：[enzomac.app/cal](https://enzomac.app/cal/zh/?ref=github-readme)（打开就能用；Mac 版是已签名公证的 DMG，macOS 14+，会自动更新）
 - 菜单栏显示日期、星期、农历、时间，可自己选。
 - 切到中文：中国日历（农历 + 调休）；切到英文：美国假日；切到日文：日本祝日。另外两个国家的假日用彩色小点标在日期下面。
 - 同事时间：列出你添加的城市现在几点、在不在上班，当地周末和假日会标出来。
