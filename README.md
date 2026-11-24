@@ -5,6 +5,8 @@ colleagues' working hours.
 
 **Download:** [enzomac.app/secondcalendar](https://enzomac.app/secondcalendar/?ref=github-readme) (signed and notarized DMG, macOS 14 or later, updates itself)
 
+**No Mac?** Try the [web version](https://enzomac.app/secondcalendar/calendar/?ref=github-readme) in any browser: the same month view, holidays and colleague clocks.
+
 [中文说明](#中文) · [日本語](#日本語)
 
 <p align="center"><img src="docs/ui/popover-zh.png" width="344" alt="Second Calendar in Chinese: lunar dates, make-up workdays and colleague clocks">
@@ -40,6 +42,7 @@ swift run SecondCalendarApp     # run without bundling (no calendar permission p
 Scripts/make-app.sh             # build "build/Second Calendar.app" (ad-hoc signed)
 Scripts/snapshot.sh 2026-10-01  # render the popover in three languages to docs/ui/ with sample events
 Scripts/update-holidays.sh      # refresh the bundled holiday data
+Scripts/web-data.sh             # export holidays and lunar labels for the web calendar (enzomac.app/secondcalendar/calendar/)
 ```
 
 `Scripts/release.sh` is what the official builds use (Developer ID signing, notarization, Sparkle appcast);

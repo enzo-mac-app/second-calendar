@@ -24,6 +24,8 @@ let package = Package(
             dependencies: ["CalendarCore", .product(name: "Sparkle", package: "Sparkle")],
             linkerSettings: [.unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "@executable_path/../Frameworks"])]
         ),
+        // Exports holidays, lunar labels and cities as JSON for the website's in-browser calendar.
+        .executableTarget(name: "sc-webdata", dependencies: ["CalendarCore"]),
         .testTarget(name: "CalendarCoreTests", dependencies: ["CalendarCore"]),
     ],
     swiftLanguageModes: [.v5]
