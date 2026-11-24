@@ -58,6 +58,8 @@ private struct GeneralSettings: View {
     @State private var loginError: String?
     @State private var updating = false
     @State private var updateLog = ""
+    @AppStorage(Telemetry.enabledKey) private var shareUsage = true
+    @ObservedObject private var updater = Updater.shared
 
     private var lang: AppLanguage { settings.language }
     private func t(_ key: String) -> String { settings.t(key) }
@@ -126,12 +128,28 @@ private struct GeneralSettings: View {
                     Text(updateLog).font(.caption).foregroundStyle(.secondary).lineLimit(2)
                 }
             }
-            Text("\(t("about")) \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "dev")")
-                .font(.caption2)
-                .foregroundStyle(.secondary)
+            Section {
+                Toggle(t("share_usage"), isOn: $shareUsage)
+                Text(t("share_usage_hint")).font(.caption).foregroundStyle(.secondary)
+            }
+            Section(t("about")) {
+                LabeledContent(t("version"), value: AppConfig.appVersion)
+                Text(t("about_line")).font(.callout)
+                if Updater.isConfigured {
+                    Toggle(t("auto_updates"), isOn: Binding(get: { updater.automaticallyChecks }, set: { updater.automaticallyChecks = $0 }))
+                    Button(t("check_updates")) { updater.checkForUpdates() }.disabled(!updater.canCheck)
+                }
+                HStack(spacing: 14) {
+                    Link(t("website"), destination: AppConfig.website)
+                    Link(t("source_code"), destination: AppConfig.sourceCode)
+                    Link(t("report_issue"), destination: AppConfig.issues)
+                    Link(t("privacy"), destination: AppConfig.privacyPolicy)
+                }
+                .font(.callout)
+            }
         }
         .formStyle(.grouped)
-        .frame(height: 640)
+        .frame(height: 680)
     }
 
     private var dataSummary: String {

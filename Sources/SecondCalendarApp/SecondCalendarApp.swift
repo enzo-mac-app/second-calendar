@@ -63,6 +63,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
                 try? SMAppService.mainApp.register()
             }
             Reminders.reschedule()
+            Updater.shared.start()
+            Telemetry.appLaunched()
             Task { await HolidayRefresh.runIfDue() }
             refreshTimer = Timer.scheduledTimer(withTimeInterval: 6 * 3600, repeats: true) { _ in
                 Task { @MainActor in await HolidayRefresh.runIfDue() }

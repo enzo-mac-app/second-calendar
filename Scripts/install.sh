@@ -1,6 +1,6 @@
 #!/bin/bash
 # Builds, signs with this Mac's Developer ID (so calendar permission survives rebuilds), copies to
-# /Applications and (re)starts it. For enzo's own use; public releases will get a release.sh later.
+# /Applications and (re)starts it. For enzo's own use; public releases use Scripts/release.sh.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 IDENTITY="${SIGN_IDENTITY:-$(security find-identity -v -p codesigning | sed -n 's/.*"\(Developer ID Application: [^"]*\)".*/\1/p' | head -1)}"

@@ -69,7 +69,17 @@ enum L10n {
         "remove": ("删除", "Remove", "削除"),
         "colleagues_hint": ("在弹窗底部显示同事那边几点、在不在上班；当地放假会标出来（中国、美国、日本有节假日数据）。", "Shows the time where colleagues are, whether they're at work, and their public holidays (China, US and Japan).", "同僚の現地時刻と勤務中かどうかを表示し、祝日も示します（中国・アメリカ・日本）。"),
         "no_holidays_city": ("这里没有节假日数据", "No holiday data here", "祝日データなし"),
-        "about": ("Second Calendar 免费自用版", "Second Calendar · free", "Second Calendar · 無料"),
+        "about": ("关于", "About", "このアプリについて"),
+        "version": ("版本", "Version", "バージョン"),
+        "about_line": ("免费、开源（MIT），由 Enzomac 制作。", "Free and open source (MIT), made by Enzomac.", "無料・オープンソース（MIT）。Enzomac 製。"),
+        "check_updates": ("检查更新…", "Check for Updates…", "アップデートを確認…"),
+        "auto_updates": ("自动检查更新", "Check for updates automatically", "自動的にアップデートを確認"),
+        "share_usage": ("发送匿名使用统计", "Share anonymous usage statistics", "匿名の使用統計を送信"),
+        "share_usage_hint": ("每天最多一次：版本、系统版本、语言、主日历国家、是否允许读日历、同事城市大概几个。不含日程、日历名、城市名和你输入的任何内容。", "At most once a day: app and macOS version, language, main calendar country, whether calendar access is on, and roughly how many colleague cities. Never your events, calendar names, cities or anything you type.", "1日最大1回：アプリとmacOSのバージョン、言語、メインの国、カレンダーへのアクセスの有無、同僚の都市のおおよその数。予定・カレンダー名・都市名・入力内容は送りません。"),
+        "website": ("官网", "Website", "ウェブサイト"),
+        "source_code": ("源代码", "Source code", "ソースコード"),
+        "report_issue": ("反馈问题", "Report an issue", "問題を報告"),
+        "privacy": ("隐私政策", "Privacy policy", "プライバシーポリシー"),
 
         // Notifications
         "reminder_workday_title": ("明天要上班", "Working day tomorrow", "明日は出勤日"),
