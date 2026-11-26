@@ -17,6 +17,9 @@ enum Theme {
     static let inkSoft = dynamic(0x6B6964, 0x9C9A96)
     static let hairline = dynamic(0xE2DFDA, 0x3A3A3F)
     static let chip = dynamic(0xEEECE9, 0x2B2B30)
+    /// The drop-down's own opaque backing. The menu-bar window is a translucent material, so without
+    /// this whatever sits behind it (a white web page, say) washes the grey text out.
+    static let surface = dynamic(0xFAF9F7, 0x1F1F22)
     /// The one accent; always carries ink-black text.
     static let accent = Color(red: 1.0, green: 0.824, blue: 0.2)
     static let onAccent = Color(red: 0.07, green: 0.07, blue: 0.07)

@@ -59,6 +59,8 @@ struct PopoverView: View {
         }
         .padding(14)
         .frame(width: 344)
+        // Snapshots add their own flat background; the live window needs an opaque one (see Theme.surface).
+        .background(snapshot ? Color.clear : Theme.surface)
         .onAppear {
             if !snapshot {
                 jumpToToday()
